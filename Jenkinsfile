@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'mvn clean -U install'
+                sh 'mvn clean package'
                 archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
             }
         }
@@ -21,8 +21,9 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
-                sh 'java -jar target/*.jar'
+                echo 'Deploying in Docker'
+                sh 'docker build --tag=MavenTest1:latest .'
+                sh 'docker run -p8887:8888 MavenTest1:latest'
             }
         }
     }
