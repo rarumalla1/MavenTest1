@@ -22,8 +22,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying in Docker'
-                sh 'docker build --tag=MavenTest1:latest .'
-                sh 'docker run -p8887:8888 MavenTest1:latest'
+                sh 'docker build --tag=maventest1:latest .'
+                sh 'docker run -p8887:8888 maventest1:latest'
             }
         }
     }

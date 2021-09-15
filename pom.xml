@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.maven.test</groupId>
-    <artifactId>MavenTest1</artifactId>
+    <artifactId>maventest1</artifactId>
     <version>0.0.1</version>
     <name>MavenTest1</name>
     <description>MavenTest1</description>
