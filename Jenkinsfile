@@ -22,7 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
-                sh 'java -jar /target/*.jar'
+                sh 'java -jar target/*.jar'
             }
         }
     }
