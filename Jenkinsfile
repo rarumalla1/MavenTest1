@@ -22,6 +22,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying....'
+                java -jar **/target/*.jar
             }
         }
     }
