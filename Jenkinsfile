@@ -22,8 +22,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying in Docker'
-                echo 'pwd'
-                echo 'ls -ltr'
+                sh 'pwd'
+                sh 'ls -ltr'
                 sh 'docker build --tag=maventest1:0.0.1 .'
                 sh 'docker run -p8887:8888 maventest1:latest'
             }
