@@ -1,6 +1,7 @@
 pipeline {
     agent any
 
+    def app
     stages {
         stage('Checkout SCM') {
             steps {
