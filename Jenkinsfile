@@ -22,7 +22,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying in Docker'
-                sh 'docker build --tag=maventest1:latest .'
+                echo 'pwd'
+                echo 'ls -ltr'
+                sh 'docker build --tag=maventest1:0.0.1 .'
                 sh 'docker run -p8887:8888 maventest1:latest'
             }
         }
